@@ -1,0 +1,20 @@
+<div class="container">
+  <form [formGroup]="checkOutForm" (submit)="onSubmit()">
+    Nombre: <input type="text" formControlName="name">
+    Edad: <input type="number" formControlName="age">
+    <input type="radio" value="Hombre" name="gender" formControlName="gender"> Hombre
+    <input type="radio" value="Mujer" name="gender" formControlName="gender"> Mujer<br /><br />
+    Direccion: <input type="text" formControlName="direction">
+    Estados: <select formControlName="estado" (change)="onSelectState($event.target.value)">
+      <option value="">Select...</option>
+      <option [value]="estado.nombre" *ngFor="let estado of estados$ | async">
+        {{estado.nombre}}</option>
+    </select>
+    Municipios: <select formControlName="municipio">
+      <option value="">Select...</option>
+      <option [value]="municipio" *ngFor="let municipio of municipios">
+        {{municipio}}</option>
+    </select>
+    <button type="submit" [disabled]="!checkOutForm.valid">Submit</button>
+  </form>
+</div>

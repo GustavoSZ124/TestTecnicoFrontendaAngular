@@ -1,0 +1,16 @@
+[
+  {
+    "nombre": "CDMX",
+    "municipios": [
+      "Miguel Hidalgo",
+      "Alvaro Obregon"
+    ]
+  },
+  {
+    "nombre": "Guerrero",
+    "municipios": [
+      "municipio 1",
+      "municipio 2"
+    ]
+  }
+]
